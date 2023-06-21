@@ -12,7 +12,7 @@
 const gridGeneratorButton = document.getElementById("grid-generator");
 gridGeneratorButton.addEventListener("click", function(){
 
-    const myContainer = document.getElementById(" grid-container");
+    const myContainer = document.getElementById("grid-container");
 
     let row;
     
