@@ -9,23 +9,39 @@
 
 
 
-const gridGeneratorButton = document.getElementById("grid-generator");
-gridGeneratorButton.addEventListener("click", function(){
+// const gridGeneratorButton = document.getElementById("grid-generator");
 
-    const myContainer = document.getElementById(" grid-generator");
+// gridGeneratorButton.addEventListener("click", function(){
+
+
+const difficultySetting = document.getElementById("difficulty-setting");
+
+
+difficultySetting.addEventListener("submit", function(event){
+
+    event.preventDefault()
+
+    const myContainer = document.getElementById("grid-container");
+
+    myContainer.innerHTML="";
+
+   const userDifficultyChoice = document.getElementById("user-difficulty-choice");
+
+   const difficultyChoiceValue = userDifficultyChoice.value;
+
 
     let row;
     
-    // ciclo: incremento i 100 volte
-    for(let i=1;i <= 100; i++){
+
+    for(let i=1;i <= (difficultyChoiceValue**2); i++){
 
         
 
-        if(i === 1 || ((i-1) % 10 === 0 && i != 100)){
+        if(i === 1 || ((i-1) % difficultyChoiceValue === 0 && i != (difficultyChoiceValue**2))){
 
             row = document.createElement("div");
 
-            row.classList.add("row", "row-cols-10", "g-0" );
+            row.classList.add("row", `row-cols-${difficultyChoiceValue}`, "g-0");
 
             myContainer.append(row);
             
@@ -34,7 +50,7 @@ gridGeneratorButton.addEventListener("click", function(){
         const col = document.createElement("div");
 
         col.addEventListener("click", function(){
-            this.toggleAttribute("active")
+            this.classList.toggle("active")
             console.log(this.innerHTML)
         })
 
@@ -44,7 +60,7 @@ gridGeneratorButton.addEventListener("click", function(){
     
         col.append(i);
     
-        console.log(i);
+        // console.log(i);
     
     
     }

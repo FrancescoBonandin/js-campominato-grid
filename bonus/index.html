@@ -30,9 +30,30 @@
     </head>
     
     <body >
-        <button id="grid-generator">
-            Generate grid
-        </button>
+        <div id="form-container" class="container">
+
+            <form action="" id="difficulty-setting">
+
+                <label for="user-difficulty-choice">
+                    Choose grid setting
+                </label>
+    
+                <select name="user-difficulty-choice" id="user-difficulty-choice">
+                    <option value="10"> Griglia 10x10(100 caselle)</option>
+                    <option value="9"> Griglia 9x9(81 caselle)</option>
+                    <option value="7"> Griglia 7x7(49 caselle)</option>
+                </select>
+                
+                <label for="grid-generator">
+                    Click to begin
+                </label>
+
+                <button id="grid-generator">
+                    Generate grid
+                </button>
+            </form>
+
+        </div>
 
         <div id="grid-container" class="container">
 

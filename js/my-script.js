@@ -34,7 +34,7 @@ gridGeneratorButton.addEventListener("click", function(){
         const col = document.createElement("div");
 
         col.addEventListener("click", function(){
-            this.toggleAttribute("active")
+            this.classList.toggle("active")
             console.log(this.innerHTML)
         })
 
