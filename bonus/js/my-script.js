@@ -54,11 +54,16 @@ difficultySetting.addEventListener("submit", function(event){
             console.log(this.innerHTML)
         })
 
-        col.classList.add("col", "cell");
+        col.classList.add("col", "cell", "align-middle");
         
         row.append(col);
+
+        const content = document.createElement("div")
+        content.classList.add("content")
     
-        col.append(i);
+        col.append(content);
+
+        content.append(i);
     
         // console.log(i);
     
