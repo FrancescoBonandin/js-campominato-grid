@@ -1,0 +1,25 @@
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*-------*/
+
+/*----GENERAL----*/
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cell{
+    aspect-ratio: 1;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: bisque;
+    
+}
+
+
+.cell.active{
+    background-color: lightblue;
+}
